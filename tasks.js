@@ -1,67 +1,39 @@
-// Task 1
+const fruits = ['apple', 'banana', 'orange', 'grape', 'mango'];
+
 function checkVotingEligibility(age) {
-  if (age >= 18)
-    console.log("You are eligible for voting,")
-  else
-    console.log("You are not eligible for voting.")
+  if (age >= 18) {
+    return 'You are eligible for voting';
+  } else {
+    return 'You are not eligible for voting';
+  }
 }
 
-// Task 2
 function printNumbersWithWhile() {
   let i = 1;
-
   while (i <= 5) {
     console.log(i);
     i++;
   }
 }
 
-// Task 3
 function printEvenNumbersWithFor() {
-  for (let i = 0; i < 10; i++) {
-    if (i % 2 == 0) {
-      console.log(i)
-    }
+  for (let i = 2; i <= 10; i += 2) {
+    console.log(i);
   }
 }
 
-// Task 4
-function getDayOfWeek(number) {
-  switch (number) {
-    case 1:
-      return "Sunday";
-    case 2:
-      return "Monday";
-    case 3:
-      return "Tuesday";
-    case 4:
-      return "Wednesday";
-    case 5:
-      return "Thursday";
-    case 6:
-      return "Friday";
-    case 7:
-      return "Saturday";
-    default:
-      return "Invalid day";
+function getDayOfWeek(day) {
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  if (day >= 1 && day <= 7) {
+    return days[day - 1];
+  } else {
+    return 'Invalid day';
   }
 }
 
-// Task 5
-function sum(x, y) {
-  return x + y;
+function sum(num1, num2) {
+  return num1 + num2;
 }
-
-// Task 6
-
-function logEachFruit() {
-  const fruits = ["apple", "banana", "orange", "grape", "mango"];
-
-  fruits.forEach((fruit) => {
-    console.log(fruit);
-  });
-}
-
 
 module.exports = {
   checkVotingEligibility,
@@ -69,10 +41,5 @@ module.exports = {
   printEvenNumbersWithFor,
   getDayOfWeek,
   sum,
-  logEachFruit,
+  fruits,
 };
-const utils = require('./tasks');
-
-console.log(utils.logEachFruit());
-
-console.log(utils.getDayOfWeek(2))
