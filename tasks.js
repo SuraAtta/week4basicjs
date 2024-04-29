@@ -43,7 +43,7 @@ function getDayOfWeek(number) {
     case 7:
       return "Saturday";
     default:
-      return "Invalid day number";
+      return "Invalid day";
   }
 }
 
@@ -53,9 +53,10 @@ function sum(x, y) {
 }
 
 // Task 6
-const fruits = ["apple", "banana", "orange", "grape", "mango"];
 
-function logEachFruit(fruits) {
+function logEachFruit() {
+  const fruits = ["apple", "banana", "orange", "grape", "mango"];
+
   fruits.forEach((fruit) => {
     console.log(fruit);
   });
@@ -71,5 +72,7 @@ module.exports = {
   logEachFruit,
 };
 const utils = require('./tasks');
+
+console.log(utils.logEachFruit());
 
 console.log(utils.getDayOfWeek(2))
