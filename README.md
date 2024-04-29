@@ -13,3 +13,4 @@ Task5: Write a function named sum that takes two parameters (num1 and num2) and 
 
 Task6: Create an array of fruits and use array methods to log each fruit to the console.
 # week4basicjs
+# week4basicjs
